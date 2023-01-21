@@ -26,3 +26,5 @@ function playRound(playerSelection, computerSelection) {
         return `It's a tie!`;
     }
 }
+
+console.log(playRound(playerSelection, computerSelection));
