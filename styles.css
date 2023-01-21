@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #24272E;
 }
 
 header {
@@ -10,7 +15,8 @@ header {
 }
 
 header > h1 {
-    color: black;
+    color: #24272E;
     text-align: center;
     font-family: Asap,sans-serif;
 }
+
