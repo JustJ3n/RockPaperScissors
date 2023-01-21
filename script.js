@@ -28,3 +28,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+let playerSelection = 'rock';
+playerSelection = playerSelection.toLowerCase()
+const computerSelection = getComputerChoice();
