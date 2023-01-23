@@ -1,5 +1,5 @@
-const userScore = 0;
-const compScore = 0;
+let userScore = 0;
+let compScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
@@ -17,22 +17,23 @@ function getComputerChoice() {
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
-        case "rs":
-        case "pr":
-        case "sp":
-            console.log("USER WINS.")
+        case "rockscissors":
+        case "paperrock":
+        case "scissorspaper":
+            win();
             break;
-        case "rp":
-        case "ps":
-        case "sr":
-            console.log("USER LOSES.")
+        case "rockpaper":
+        case "paperscissors":
+        case "scissorsrock":
+            lose();
             break;
-        case "rr":
-        case "pp":
-        case "ss":
-            console.log("It's a draw.")
+        case "rockrock":
+        case "paperpaper":
+        case "scissorsscissors":
+            draw();
             break;
     }
+}
 
 function main() {
     rock_div.addEventListener('click', function() {
