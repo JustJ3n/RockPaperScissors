@@ -14,6 +14,26 @@ function getComputerChoice() {
     return randomChoice;
 }
 
+function game(userChoice) {
+    const computerChoice = getComputerChoice();
+    switch (userChoice + computerChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+            console.log("USER WINS.")
+            break;
+        case "rp":
+        case "ps":
+        case "sr":
+            console.log("USER LOSES.")
+            break;
+        case "rr":
+        case "pp":
+        case "ss":
+            console.log("It's a draw.")
+            break;
+    }
+
 function main() {
     rock_div.addEventListener('click', function() {
         game("rock");
