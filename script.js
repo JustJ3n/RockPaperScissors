@@ -14,6 +14,12 @@ function getComputerChoice() {
     return randomChoice;
 }
 
+function win() {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = compScore;
+}
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
