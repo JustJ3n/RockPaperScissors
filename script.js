@@ -18,18 +18,24 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${(userChoice)}(user) beats ${(computerChoice)}(comp). You win! 🔥`;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${(userChoice)}${smallUserWord} beats ${(computerChoice)}${smallCompWord}. You win! 🔥`;
 }
 
 function lose(userChoice, computerChoice) {
     compScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${(userChoice)}(user) loses to ${(computerChoice)}(comp). You lost... 💩`;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${(userChoice)}${smallUserWord} loses to ${(computerChoice)}${smallCompWord}. You lost... 💩`;
 }
 
 function draw(userChoice, computerChoice) {
-    result_p.innerHTML = `${(userChoice)}(user) equals ${(computerChoice)}(comp). It's a draw. 🤯`;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${(userChoice)}${smallUserWord} equals ${(computerChoice)}${smallCompWord}. It's a draw. 🤯`;
 }
 
 function game(userChoice) {
