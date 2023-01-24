@@ -4,12 +4,12 @@ const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissors_div = document.getElementById("scissors");
+const rock_div = document.getElementById("Rock");
+const paper_div = document.getElementById("Paper");
+const scissors_div = document.getElementById("Scissors");
 
 function getComputerChoice() {
-    let choices = ['rock', 'paper', 'scissors'];
+    let choices = ['Rock', 'Paper', 'Scissors'];
     let randomChoice = choices[Math.floor(Math.random() * choices.length)];
     return randomChoice;
 }
@@ -35,19 +35,19 @@ function draw(userChoice, computerChoice) {
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
-        case "rockscissors":
-        case "paperrock":
-        case "scissorspaper":
+        case "RockScissors":
+        case "PaperRock":
+        case "ScissorsPaper":
             win(userChoice, computerChoice);
             break;
-        case "rockpaper":
-        case "paperscissors":
-        case "scissorsrock":
+        case "RockPaper":
+        case "PaperScissors":
+        case "ScissorsRock":
             lose(userChoice, computerChoice);
             break;
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscissors":
+        case "RockRock":
+        case "PaperPaper":
+        case "ScissorsScissors":
             draw(userChoice, computerChoice);
             break;
     }
@@ -55,15 +55,15 @@ function game(userChoice) {
 
 function main() {
     rock_div.addEventListener('click', function() {
-        game("rock");
+        game("Rock");
     })
 
     paper_div.addEventListener('click', function() {
-        game("paper");
+        game("Paper");
     })
 
     scissors_div.addEventListener('click', function() {
-        game("scissors");
+        game("Scissors");
     })
 }
 
