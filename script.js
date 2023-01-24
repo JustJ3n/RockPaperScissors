@@ -21,6 +21,12 @@ function win(userChoice, computerChoice) {
     result_p.innerHTML = `${(userChoice)}(user) beats ${(computerChoice)}(comp). You win! 🔥`;
 }
 
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = compScore;
+    result_p.innerHTML = `${(userChoice)}(user) loses to ${(computerChoice)}(comp). You lost... 💩`;
+}
 
 
 function game(userChoice) {
