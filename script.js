@@ -22,12 +22,15 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
-    computerScore++;
+    compScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
     result_p.innerHTML = `${(userChoice)}(user) loses to ${(computerChoice)}(comp). You lost... 💩`;
 }
 
+function draw(userChoice, computerChoice) {
+    result_p.innerHTML = `${(userChoice)}(user) equals ${(computerChoice)}(comp). It's a draw. 🤯`;
+}
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
