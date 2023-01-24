@@ -21,6 +21,7 @@ function win(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} beats ${(computerChoice)}${smallCompWord}. You win! 🔥`;
+    document.getElementById(userChoice).classList.add('green-glow');
 }
 
 function lose(userChoice, computerChoice) {
@@ -30,12 +31,14 @@ function lose(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} loses to ${(computerChoice)}${smallCompWord}. You lost... 💩`;
+    document.getElementById(userChoice).classList.add('red-glow');
 }
 
 function draw(userChoice, computerChoice) {
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} equals ${(computerChoice)}${smallCompWord}. It's a draw. 🤯`;
+    document.getElementById(userChoice).classList.add('gray-glow');
 }
 
 function game(userChoice) {
