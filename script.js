@@ -18,6 +18,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
+    result_p.innerHTML = `${(userChoice)}(user) beats ${(computerChoice)}(comp). You win! 🔥`;
 }
 
 
