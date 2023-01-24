@@ -18,27 +18,30 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
+    const userChoice_div = document.getElementById(userChoice);
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} beats ${(computerChoice)}${smallCompWord}. You win! 🔥`;
-    document.getElementById(userChoice).classList.add('green-glow');
+    userChoice_div.classList.add('green-glow');
 }
 
 function lose(userChoice, computerChoice) {
     compScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
+    const userChoice_div = document.getElementById(userChoice);
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} loses to ${(computerChoice)}${smallCompWord}. You lost... 💩`;
-    document.getElementById(userChoice).classList.add('red-glow');
+    userChoice_div.classList.add('red-glow');
 }
 
 function draw(userChoice, computerChoice) {
+    const userChoice_div = document.getElementById(userChoice);
     const smallUserWord = "user".fontsize(3).sub();
     const smallCompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = `${(userChoice)}${smallUserWord} equals ${(computerChoice)}${smallCompWord}. It's a draw. 🤯`;
-    document.getElementById(userChoice).classList.add('gray-glow');
+    userChoice_div.classList.add('gray-glow');
 }
 
 function game(userChoice) {
