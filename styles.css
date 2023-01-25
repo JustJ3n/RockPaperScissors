@@ -100,7 +100,7 @@ header > h1 {
     border-radius: 30%;
     border-color: aliceblue;
     background-color: whitesmoke;
-    transition: color .5s, background-color .5s, border-radius 1s, box-shadow 1.5s, transform 2s
+    transition: color .5s, background-color .5s, border-radius 1s, box-shadow 1.5s
 }
 
 #resetBtn:hover {
