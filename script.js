@@ -78,3 +78,10 @@ function enableClick() {
     scissors_div.addEventListener('click', () => game("Scissors"));
     gameOver = false; // assign gameOver value to false
 }
+
+//remove click event listeners for user choice to prevent game function from running
+function disableClick() {
+    rock_div.removeEventListener('click', () => game ("Rock"));
+    paper_div.removeEventListener('click', () => game("Paper"));
+    scissors_div.removeEventListener('click', () => game("Scissors"));
+}
