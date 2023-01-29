@@ -17,7 +17,6 @@ function getComputerChoice() {
 }
 
 function win(userChoice, computerChoice) {
-    userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
     const userChoice_div = document.getElementById(userChoice);
@@ -29,7 +28,6 @@ function win(userChoice, computerChoice) {
 }
 
 function lose(userChoice, computerChoice) {
-    compScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
     const userChoice_div = document.getElementById(userChoice);
@@ -57,12 +55,14 @@ function game(userChoice) {
             case "RockScissors":
             case "PaperRock":
             case "ScissorsPaper":
+                userScore++; // add a point to user score
                 win(userChoice, computerChoice); 
                 isGameOver(); // check to see if either user or comp is at 5 points 
                 break;
             case "RockPaper":
             case "PaperScissors":
             case "ScissorsRock":
+                compScore++; // add a point to computer score
                 lose(userChoice, computerChoice);
                 isGameOver(); //check to see if either user or comp is at 5 points 
                 break;
