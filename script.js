@@ -117,3 +117,9 @@ function isGameOver() {
         return;
     }
 };
+
+enableClick();
+game();
+isGameOver();
+resetGame();
+
