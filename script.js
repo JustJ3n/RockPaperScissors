@@ -10,12 +10,14 @@ const paper_div = document.getElementById("Paper");
 const scissors_div = document.getElementById("Scissors");
 const restartBtn = document.getElementById("restartBtn");
 
+//Computer choice: randomly choose rock, paper, or scissors
 function getComputerChoice() {
     let choices = ['Rock', 'Paper', 'Scissors'];
     let randomChoice = choices[Math.floor(Math.random() * choices.length)];
     return randomChoice;
 }
 
+//win function if user beats computer in a round game
 function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
@@ -27,6 +29,7 @@ function win(userChoice, computerChoice) {
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
 
+//lose function if user loses to computer in a round game
 function lose(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = compScore;
@@ -38,7 +41,7 @@ function lose(userChoice, computerChoice) {
     setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 
-
+// draw function if user and computer ties in a round game
 function draw(userChoice, computerChoice) {
     const userChoice_div = document.getElementById(userChoice);
     const smallUserWord = "user".fontsize(3).sub();
