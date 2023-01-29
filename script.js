@@ -85,3 +85,14 @@ function disableClick() {
     paper_div.removeEventListener('click', () => game("Paper"));
     scissors_div.removeEventListener('click', () => game("Scissors"));
 }
+
+//reset game 
+resetBtn.addEventListener('click', resetGame); //add 'click' event listener to reset button
+function resetGame() {
+    userScore = 0;  //score back to 0 point
+    compScore = 0;  //score back to 0 point
+    result_p.innerHTML = '⭐️First to score 5 points wins⭐️' 
+    userScore_span.innerHTML= 0;
+    computerScore_span.innerHTML= 0;
+    enableClick(); // re adding the click event listeners 
+ };     
