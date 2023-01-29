@@ -51,25 +51,31 @@ function draw(userChoice, computerChoice) {
 }
 
 function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    switch (userChoice + computerChoice) {
-        case "RockScissors":
-        case "PaperRock":
-        case "ScissorsPaper":
-            win(userChoice, computerChoice);
-            break;
-        case "RockPaper":
-        case "PaperScissors":
-        case "ScissorsRock":
-            lose(userChoice, computerChoice);
-            break;
-        case "RockRock":
-        case "PaperPaper":
-        case "ScissorsScissors":
-            draw(userChoice, computerChoice);
-            break;
-    }
-}
+    if (gameOver === false) { // if game0ver is false - run the user choice + comp choice through the switch case possibilities
+        const computerChoice = getComputerChoice();
+        switch (userChoice + computerChoice) {
+            case "RockScissors":
+            case "PaperRock":
+            case "ScissorsPaper":
+                win(userChoice, computerChoice); 
+                isGameOver(); // check to see if either user or comp is at 5 points 
+                break;
+            case "RockPaper":
+            case "PaperScissors":
+            case "ScissorsRock":
+                lose(userChoice, computerChoice);
+                isGameOver(); //check to see if either user or comp is at 5 points 
+                break;
+            case "RockRock":
+            case "PaperPaper":
+            case "ScissorsScissors":
+                draw(userChoice, computerChoice); 
+                break;
+            } 
+         } else {  // if gameOver is true
+            disableClick(); // disable click - thus will not run the game function 
+        } 
+    };    
 
 //add click event listeners for user choice which will run the game function 
 function enableClick() { 
