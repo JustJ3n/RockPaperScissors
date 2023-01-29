@@ -1,5 +1,6 @@
 let userScore = 0;
 let compScore = 0;
+let gameOver = '';
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const scoreBoard_div = document.querySelector(".score-board");
@@ -70,12 +71,10 @@ function game(userChoice) {
     }
 }
 
-function main() {
+//add click event listeners for user choice which will run the game function 
+function enableClick() { 
     rock_div.addEventListener('click' , () => game("Rock"));
-    
     paper_div.addEventListener('click', () => game("Paper"));
-
     scissors_div.addEventListener('click', () => game("Scissors"));
+    gameOver = false; // assign gameOver value to false
 }
-
-main();
