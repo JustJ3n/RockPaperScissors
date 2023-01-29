@@ -96,3 +96,18 @@ function resetGame() {
     computerScore_span.innerHTML= 0;
     enableClick(); // re adding the click event listeners 
  };     
+
+//Create a function that checks if user or comp score is at 5 points.
+// First one to reach 5 points, update appropriate result text and set gameOver value as true. 
+//If not, return to the game function to continue playing the rounds.
+function isGameOver() {
+    if(userScore_span.innerHTML === '5' && userScore_span.innerHTML > computerScore_span.innerHTML) {
+        result_p.innerHTML = 'You Win! Hurray 🎉';
+        gameOver = true;
+    } else if (computerScore_span.innerHTML === '5' && computerScore_span.innerHTML > userScore_span.innerHTML) {
+        result_p.innerHTML = 'You Lose...💩 Better Luck Next Time!';
+        gameOver = true;
+    } else {
+        return;
+    }
+};
