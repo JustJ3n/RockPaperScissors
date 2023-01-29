@@ -7,6 +7,7 @@ const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("Rock");
 const paper_div = document.getElementById("Paper");
 const scissors_div = document.getElementById("Scissors");
+const restartBtn = document.getElementById("restartBtn");
 
 function getComputerChoice() {
     let choices = ['Rock', 'Paper', 'Scissors'];
